@@ -105,7 +105,7 @@ export default function SingleSVGPage() {
                     href={"#"}
                   >
                     <span>Download</span>
-                    <i className="md:ml-2 fas fa-download"></i>
+                    <i className="ml-2 fas fa-download"></i>
                   </Link>
                 </div>
               </div>
