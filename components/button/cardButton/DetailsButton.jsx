@@ -13,7 +13,7 @@ export default function DetailsButton({ assetsInfo, iconSm = false }) {
       </Link>
       <span
         className={`absolute top-1/2 right-[52px] -translate-y-1/2 hidden group-hover/details:flex text-white text-nowrap px-4 py-2 rounded shadow-lg z-50 bg-light-black ${
-          iconSm ? "text-xs" : "text-sm"
+          iconSm ? "text-xs md:text-sm" : "text-sm"
         }`}
       >
         Details

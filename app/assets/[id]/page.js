@@ -24,13 +24,13 @@ export default function SingleSVGPage({ params }) {
               Title Hhaijiajijn jjij
             </h1>
             <div className="w-full  flex flex-col md:flex-row gap-3 text-sm">
-              <button className="py-3 w-full md:w-1/2 bg-dark-black text-white font-semibold rounded-lg hover:bg-opacity-90 custom-transition">
+              <button className="py-3 w-full md:w-1/2 bg-dark-black text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors duration-300 ease-in">
                 Download
                 <i className="ml-3 fas fa-download"></i>
               </button>
               <Link
                 href={`/design/${svgId}`}
-                className="py-3 w-full md:w-1/2 bg-dark-black text-white text-center font-semibold rounded-lg hover:bg-opacity-90 custom-transition"
+                className="py-3 w-full md:w-1/2 bg-dark-black text-white text-center font-semibold rounded-lg hover:bg-opacity-90 transition-colors duration-300 ease-in"
               >
                 Edit SVG
                 <i className="ml-3 fas fa-edit"></i>
