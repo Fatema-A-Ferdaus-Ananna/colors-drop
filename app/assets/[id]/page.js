@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SingleSVGPage() {
+export default function SingleSVGPage({ params }) {
+  const svgId = params.id;
+
   return (
     <div className="py-[86px] bg-white">
       <section className="container mx-auto px-6 md:px-20  flex flex-col gap-3">
@@ -26,10 +28,13 @@ export default function SingleSVGPage() {
                 Download
                 <i className="ml-3 fas fa-download"></i>
               </button>
-              <button className="py-3 w-full md:w-1/2 bg-dark-black text-white font-semibold rounded-lg hover:bg-opacity-90 custom-transition">
+              <Link
+                href={`/design/${svgId}`}
+                className="py-3 w-full md:w-1/2 bg-dark-black text-white text-center font-semibold rounded-lg hover:bg-opacity-90 custom-transition"
+              >
                 Edit SVG
                 <i className="ml-3 fas fa-edit"></i>
-              </button>
+              </Link>
             </div>
 
             <div className="w-full flex flex-col gap-3">

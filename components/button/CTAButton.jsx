@@ -11,4 +11,4 @@ export default function CTAButton({ children }) {
     </Link>
   );
 }
-// rgba(247, 37, 133, 1); rgba(76, 201, 240, 1)
+// rgba(247,37,133, 1); rgba(76,201,240, 1)

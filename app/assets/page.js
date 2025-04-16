@@ -1,3 +1,6 @@
+import CopyInfoButton from "@/components/button/cardButton/CopyInfoButton";
+import DetailsButton from "@/components/button/cardButton/DetailsButton";
+import EditButton from "@/components/button/cardButton/EditButton";
 import Link from "next/link";
 
 export default function AllSVGPage() {
@@ -94,7 +97,7 @@ export default function AllSVGPage() {
                   backgroundImage: `url(${content.thumbnail})`,
                 }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-10 transition-opacity duration-300 group-hover:bg-opacity-30"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 {/* Editable tag */}
                 <span className="px-2 py-1 absolute left-2 top-2 bg-light-gray text-dark-black text-xs md:text-[13px] rounded-[4px] transition-opacity duration-300 ">
                   Editable
@@ -102,24 +105,9 @@ export default function AllSVGPage() {
 
                 {/* Icons */}
                 <div className="absolute right-2 top-2 flex flex-col gap-2 transition-opacity duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                  <Link
-                    href={`/${content.id}`}
-                    className="w-10 h-10 bg-white text-dark-black rounded-[4px] flex justify-center items-center shadow-md"
-                  >
-                    <i className="fas fa-info-circle text-lg md:text-xl"></i>
-                  </Link>
-                  <Link
-                    href={"#"}
-                    className="w-10 h-10 bg-white text-dark-black rounded-[4px] flex justify-center items-center shadow-md"
-                  >
-                    <i className="fas fa-link text-lg"></i>
-                  </Link>
-                  <Link
-                    href={"#"}
-                    className="w-10 h-10 bg-white text-dark-black rounded-[4px] flex justify-center items-center shadow-md"
-                  >
-                    <i className="fas fa-edit text-lg"></i>
-                  </Link>
+                  <DetailsButton assetsInfo={content.id} />
+                  <CopyInfoButton assetsInfo={content.id} />
+                  <EditButton assetsInfo={content.id} />
                 </div>
 
                 {/* Edit & Download Button */}

@@ -1,28 +1,31 @@
-// components/common/ScrollMemory.js
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 export default function RestoreScroll() {
   const pathname = usePathname();
 
-  // Save scroll position before navigating away
-  useEffect(() => {
-    const saveScrollPosition = () => {
-      sessionStorage.setItem("scroll-pos", window.scrollY.toString());
+  // Save scroll position BEFORE leaving the page
+  useLayoutEffect(() => {
+    const saveScroll = () => {
+      sessionStorage.setItem(
+        `scroll-pos-${pathname}`,
+        window.scrollY.toString()
+      );
     };
 
-    window.addEventListener("beforeunload", saveScrollPosition);
-    return () => window.removeEventListener("beforeunload", saveScrollPosition);
-  }, []);
+    window.addEventListener("pagehide", saveScroll);
+    return () => {
+      saveScroll(); // Save when unmounting too
+      window.removeEventListener("pagehide", saveScroll);
+    };
+  }, [pathname]);
 
-  // Restore scroll position only on root/home page
-  useEffect(() => {
-    const saved = sessionStorage.getItem("scroll-pos");
-
-    // Only restore on homepage
-    if (pathname === "/" && saved) {
+  // Restore scroll AFTER route mounts
+  useLayoutEffect(() => {
+    const saved = sessionStorage.getItem(`scroll-pos-${pathname}`);
+    if (saved) {
       window.scrollTo(0, parseInt(saved));
     }
   }, [pathname]);

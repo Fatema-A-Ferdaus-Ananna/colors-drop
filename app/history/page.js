@@ -48,7 +48,7 @@ export default function HistoryPage() {
             Delete All <i className="ml-1 text-xs  fas fa-trash"></i>
           </button>
 
-          <button className="hover:text-black transition-all duration-300 ease-in">
+          <button className="hover:text-secondary-dark transition-all duration-300 ease-in">
             Sort By
             <i className="ml-1 text-xs fas fa-exchange-alt rotate-90"></i>
           </button>
@@ -57,9 +57,8 @@ export default function HistoryPage() {
       <hr />
       <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-5">
         {contents.map((con) => (
-          <Link
+          <div
             key={con.id}
-            href={`/allSVG`}
             className="p-3 flex items-center justify-between gap-4 rounded-md bg-white shadow-md"
           >
             <div className="w-[75%] flex items-center gap-3 text-sm md:text-base font-semibold">
@@ -79,14 +78,17 @@ export default function HistoryPage() {
               </span>
             </div>
             <div className="w-[20%] px-2 flex gap-5 text-sm justify-end">
-              <button className="text-blue-600 hover:scale-110">
+              <Link
+                href={`/design/${con.id}`}
+                className="text-blue-600 hover:scale-110"
+              >
                 <i className="fas fa-edit"></i>
-              </button>
+              </Link>
               <button className="text-red-700 hover:scale-110">
                 <i className="fas fa-trash"></i>
               </button>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>
