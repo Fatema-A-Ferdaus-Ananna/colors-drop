@@ -123,18 +123,22 @@ export default function Footer() {
           <div>
             <h3 className=" font-semibold mb-3">Connect With Us</h3>
             <div className="flex space-x-4 text-light-gray text-3xl">
-              <a
-                href="#"
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.linkedin.com/in/fatema-a-ferdaus/`}
                 className="hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i className="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://github.com/Fatema-A-Ferdaus-Ananna`}
                 className="hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i className="fab fa-github"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

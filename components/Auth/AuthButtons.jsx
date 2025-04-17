@@ -98,13 +98,13 @@ export default function AuthButtons() {
             <h4 className="text-sm font-light text-dark-gray">Assets</h4>
             <ul className="font-bold flex flex-col gap-3">
               <li>
-                <Link href={`/allSVG`} onClick={() => setShowMenuModal(false)}>
+                <Link href={`/assets`} onClick={() => setShowMenuModal(false)}>
                   <i className="fas fa-icons mr-4"></i>
                   SVG Icons
                 </Link>
               </li>
               <li>
-                <Link href={`/allSVG`} onClick={() => setShowMenuModal(false)}>
+                <Link href={`/assets`} onClick={() => setShowMenuModal(false)}>
                   <i className="fas fa-square mr-4"></i>
                   SVG Background
                 </Link>
@@ -148,12 +148,22 @@ export default function AuthButtons() {
             </h4>
             <ul className="font-bold text-4xl flex gap-5">
               <li>
-                <Link href={`/allSVG`} onClick={() => setShowMenuModal(false)}>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://github.com/Fatema-A-Ferdaus-Ananna`}
+                  onClick={() => setShowMenuModal(false)}
+                >
                   <i className="fab fa-github "></i>
                 </Link>
               </li>
               <li>
-                <Link href={`/allSVG`} onClick={() => setShowMenuModal(false)}>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://www.linkedin.com/in/fatema-a-ferdaus/`}
+                  onClick={() => setShowMenuModal(false)}
+                >
                   <i className="fab fa-linkedin"></i>
                 </Link>
               </li>
