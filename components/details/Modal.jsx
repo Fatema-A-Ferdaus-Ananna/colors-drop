@@ -65,7 +65,6 @@ export default function Modal({ children }) {
       className="fixed h-screen z-50 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60 md:px-3 flex justify-center items-center"
       onClick={onClick}
     >
-      <div className="absolute inset-0 backdrop-blur-sm"></div>
       <div
         ref={wrapper}
         className="py-3 w-[95%] h-[80%] md:h-[88%] max-h-fit shadow-color-purple shadow-lg flex flex-col rounded-lg relative bg-white"
