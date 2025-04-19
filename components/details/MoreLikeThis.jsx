@@ -3,7 +3,7 @@ import { contents } from "@/data/data";
 import { useEffect, useRef, useState } from "react";
 import SquareCard from "../Cards/SquareCard";
 
-export default function MoreLikeThis() {
+export default function MoreLikeThis({ modal = false }) {
   const scrollRef = useRef(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
@@ -50,9 +50,11 @@ export default function MoreLikeThis() {
       {showLeft && (
         <button
           onClick={() => scrollByAmount(-300)}
-          className="absolute -left-5 top-[40%] z-10"
+          className={`${
+            modal ? "w-8 h-8 -left-4" : "w-10 h-10 -left-5"
+          } text-dark-black bg-white drop-shadow-md absolute top-[40%] z-10 rounded-full flex justify-center items-center`}
         >
-          <i className="w-10 h-10 text-dark-black bg-white drop-shadow-lg fa-solid fa-chevron-left rounded-full flex justify-center items-center"></i>
+          <i className="fa-solid fa-chevron-left"></i>
         </button>
       )}
 
@@ -60,9 +62,11 @@ export default function MoreLikeThis() {
       {showRight && (
         <button
           onClick={() => scrollByAmount(300)}
-          className="absolute -right-5 top-[40%] z-10"
+          className={`${
+            modal ? "w-8 h-8 -right-4" : "w-10 h-10 -right-5"
+          } text-dark-black bg-white drop-shadow-md absolute top-[40%] z-10 rounded-full flex justify-center items-center`}
         >
-          <i className="w-10 h-10 text-dark-black bg-white drop-shadow-md fa-solid fa-chevron-right rounded-full flex justify-center items-center"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </button>
       )}
     </div>

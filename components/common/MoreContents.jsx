@@ -38,7 +38,7 @@ export default function MoreContents() {
         >
           <ul className="grid grid-cols-1 gap-y-2 relative font-bold">
             <li>
-              <Link href={`/allSVG`} className="custom-hover-contents">
+              <Link href={`/assets`} className="custom-hover-contents">
                 <div
                   className="h-20 aspect-square bg-cover bg-center rounded-md"
                   style={{
@@ -49,7 +49,7 @@ export default function MoreContents() {
               </Link>
             </li>
             <li>
-              <Link href={`/allSVG`} className="custom-hover-contents">
+              <Link href={`/assets`} className="custom-hover-contents">
                 <div
                   className="h-20 aspect-square bg-cover bg-center rounded-md"
                   style={{

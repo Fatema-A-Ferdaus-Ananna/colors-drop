@@ -6,7 +6,7 @@ import { useLayoutEffect } from "react";
 export default function RestoreScroll() {
   const pathname = usePathname();
 
-  // Save scroll position BEFORE leaving the page
+  // Save scroll position on pagehide/unmount
   useLayoutEffect(() => {
     const saveScroll = () => {
       sessionStorage.setItem(
@@ -17,16 +17,21 @@ export default function RestoreScroll() {
 
     window.addEventListener("pagehide", saveScroll);
     return () => {
-      saveScroll(); // Save when unmounting too
+      saveScroll();
       window.removeEventListener("pagehide", saveScroll);
     };
   }, [pathname]);
 
-  // Restore scroll AFTER route mounts
+  // Restore scroll OR scroll to top for `/details/[id]`
   useLayoutEffect(() => {
-    const saved = sessionStorage.getItem(`scroll-pos-${pathname}`);
-    if (saved) {
-      window.scrollTo(0, parseInt(saved));
+    const isDetailsPage = pathname?.startsWith("/details/");
+    if (isDetailsPage) {
+      window.scrollTo(0, 0); // Force scroll to top
+    } else {
+      const saved = sessionStorage.getItem(`scroll-pos-${pathname}`);
+      if (saved) {
+        window.scrollTo(0, parseInt(saved));
+      }
     }
   }, [pathname]);
 

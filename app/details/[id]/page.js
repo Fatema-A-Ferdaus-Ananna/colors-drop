@@ -9,7 +9,7 @@ export default function SingleSVGPage({ params }) {
     <div className="py-[86px] bg-white">
       <section className="container mx-auto px-6 md:px-20  flex flex-col gap-3">
         {/* details */}
-        <div className="py-6 flex flex-col gap-10 lg:flex-row justify-between items-center lg:items-stretch ">
+        <div className="py-6 flex flex-col gap-10 lg:flex-row justify-between items-center lg:items-stretch">
           <div className="w-full md:w-fit flex  items-start">
             <div className="w-full md:w-[400px]  aspect-square rounded-2xl overflow-clip">
               <Image

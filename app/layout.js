@@ -11,7 +11,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
       <body>
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <RestoreScroll />
         <div id="modal-root" />
         {children}
+        {modal}
         <Footer />
       </body>
     </html>
