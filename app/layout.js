@@ -1,6 +1,3 @@
-import Footer from "@/components/common/Footer";
-import Navbar from "@/components/common/Navbar";
-import RestoreScroll from "@/components/common/RestoreScroll";
 import "./globals.css";
 
 export const metadata = {
@@ -14,14 +11,7 @@ export const metadata = {
 export default function RootLayout({ children, modal }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        <RestoreScroll />
-        <div id="modal-root" />
-        {children}
-        {modal}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

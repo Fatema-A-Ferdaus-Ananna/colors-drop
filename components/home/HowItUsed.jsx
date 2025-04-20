@@ -37,8 +37,12 @@ export default function HowItUsed() {
           </div>
         </div>
         <div className="flex gap-4">
-          <i className="w-12 h-12 text-white text-xl bg-dark-gray fa-solid fa-chevron-left rounded-full flex justify-center items-center"></i>
-          <i className="w-12 h-12 text-white text-xl bg-dark-gray fa-solid fa-chevron-right rounded-full flex justify-center items-center"></i>
+          <span className="w-12 h-12 text-white text-xl bg-dark-gray rounded-full flex justify-center items-center">
+            <i className="fa-solid fa-chevron-left "></i>
+          </span>
+          <span className="w-12 h-12 text-white text-xl bg-dark-gray rounded-full flex justify-center items-center">
+            <i className="fa-solid fa-chevron-right "></i>
+          </span>
         </div>
       </div>
     </section>

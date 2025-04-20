@@ -27,8 +27,8 @@ export default function DetailsModalSection({ assetInfo }) {
     <>
       {showModal && (
         <Modal>
-          <div className="py-4 md:py-16 bg-white rounded-lg scroll-auto">
-            <section className="container mx-auto px-3 md:px-20  flex flex-col gap-3">
+          <div className="py-4 md:py-16">
+            <section className="container mx-auto md:px-20  flex flex-col gap-3">
               {/* details */}
               <div className="py-6 flex flex-col gap-10 lg:flex-row justify-between items-center lg:items-stretch ">
                 <div className="w-full md:w-fit flex  items-start">

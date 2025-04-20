@@ -5,7 +5,7 @@ export default function HeroSection() {
     <>
       <div className="container mx-auto">
         <div className="px-6 py-32 min-h-fit h-screen max-h-[1080px] flex flex-col justify-start items-center gap-8 text-center">
-          <h1 className="text-4xl md:text-6xl  font-medium md:font-semibold tracking-tight">
+          <h1 className="text-4xl md:text-6xl  font-medium md:font-semibold tracking-tight ">
             A Marketplace for <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary  ">
               Editable SVG Icon

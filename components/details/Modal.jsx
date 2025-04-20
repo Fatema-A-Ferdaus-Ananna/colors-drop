@@ -67,7 +67,7 @@ export default function Modal({ children }) {
     >
       <div
         ref={wrapper}
-        className="py-3 w-[95%] h-[80%] md:h-[88%] max-h-fit shadow-color-purple shadow-lg flex flex-col rounded-lg relative bg-white"
+        className="p-3  w-[95%] h-[80%] md:h-[88%] max-h-fit shadow-color-purple shadow-lg flex justify-center items-center rounded-lg relative bg-white"
       >
         {/* Close Icon */}
         <div className="absolute -top-2 -right-2 z-50">
@@ -80,7 +80,9 @@ export default function Modal({ children }) {
         </div>
 
         {/* Scrollable Content */}
-        <div className="overflow-y-auto px-2 h-full max-h-fit">{children}</div>
+        <div className="overflow-y-auto overflow-x-hidden h-full max-h-fit rounded-lg custom-scrollbar-thin">
+          {children}
+        </div>
       </div>
     </div>
   );
