@@ -1,5 +1,8 @@
 "use client";
 
+import Development from "@/public/assets/svg/project1.svg";
+import Logo from "@/public/favicon.svg";
+import Image from "next/image";
 import { useState } from "react";
 import PortalModal from "../Auth/PortalModal";
 
@@ -41,14 +44,21 @@ export default function DesignEditorNav() {
 
   return (
     <>
-      <h1 className="font-extrabold archivo-black-regular tracking-tighter text-dark-black">
-        Colors Drop Editor
+      <h1 className="font-extrabold oswald  text-xl lg:text-lg text-transparent bg-clip-text bg-gradient-to-l from-primary to-secondary-dark flex items-center">
+        <Image
+          width={100}
+          height={100}
+          alt="logo"
+          src={Logo}
+          className="mr-1 w-fit h-5 lg:h-4"
+        />
+        COLORS DROP EDITOR
       </h1>
       <span
         onClick={() => setDeveloperInfoModal(true)}
-        className="w-7 h-7 flex justify-center items-center bg-dark-black rounded-full cursor-pointer"
+        className="w-6 h-6 flex justify-center items-center bg-dark-black rounded-full cursor-pointer"
       >
-        <i className="fas fa-info text-white text-base"></i>
+        <i className="fas fa-info text-white text-xs"></i>
       </span>
 
       {developerInfoModal && (
@@ -72,8 +82,8 @@ export default function DesignEditorNav() {
                 <h2 className="text-xl font-extrabold">Developer Info</h2>
                 <div className="text-center text-sm text-gray-300 leading-relaxed mt-2 space-y-1">
                   <p>
-                    <span className="font-bold">Name:</span> Fatema A Ferdaus
-                    Ananna
+                    <span className="font-bold">Name:</span> Fatema-A-Ferdaus
+                    (Ananna)
                   </p>
                   <p>
                     <span className="font-bold">Role:</span> Software Engineer
@@ -105,7 +115,7 @@ export default function DesignEditorNav() {
                 </div>
               </div>
 
-              <div className="flex gap-4  flex-col items-center">
+              <div className="flex gap-2  flex-col items-center">
                 <h2 className="text-xl font-extrabold">Connect With Me</h2>
                 <div className="flex gap-4 items-center justify-center">
                   <a
@@ -134,9 +144,22 @@ export default function DesignEditorNav() {
               </div>
 
               {/* Copyright */}
-              <div className="text-sm text-gray-400 mt-4">
-                <i className="fa-solid fa-copyright mr-2"></i>
-                2025 All rights reserved.
+              <div className="text-sm text-gray-400 flex flex-col items-center">
+                <span>
+                  {" "}
+                  <i className="fa-solid fa-copyright mr-2"></i>
+                  2025 All rights reserved.
+                </span>
+                <div className="flex text-xl font-extrabold text-secondary">
+                  Under Development
+                  <Image
+                    width={30}
+                    height={30}
+                    alt="i"
+                    src={Development}
+                    className="ml-1"
+                  />
+                </div>
               </div>
             </div>
           </div>
