@@ -15,7 +15,7 @@ export default function SVGDesignPage() {
           <DesignEditorNav />
         </div>
 
-        <div className="lg:w-[73%] lg:min-h-[512px] aspect-square md:aspect-video bg-[#f1f1f1] rounded-lg drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)] flex justify-center items-center  overflow-scroll">
+        <div className="lg:w-[73%] lg:min-h-[512px] aspect-square md:aspect-video bg-light-gray rounded-lg drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)] flex justify-center items-center  overflow-scroll">
           <CanvasEditor />
         </div>
 

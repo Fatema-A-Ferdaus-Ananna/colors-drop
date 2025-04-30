@@ -27,13 +27,13 @@ export default function CanvasEditor() {
       <div className="absolute top-4 left-4 z-10 space-x-2">
         <button
           onClick={() => setScale((s) => Math.max(0.1, s - 0.1))}
-          className="bg-dark-black text-white w-7 h-7 rounded shadow"
+          className="bg-dark-black text-white w-7 h-7 rounded shadow-md"
         >
           -
         </button>
         <button
           onClick={() => setScale((s) => s + 0.1)}
-          className="bg-dark-black text-white w-7 h-7 rounded shadow"
+          className="bg-dark-black text-white w-7 h-7 rounded shadow-md"
         >
           +
         </button>

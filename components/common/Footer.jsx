@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="bg-dark-black text-white pt-20">
+    <footer className="bg-dark-black text-white pt-20 relative">
       <div className=" mx-auto px-6 flex flex-col md:flex-row gap-10 md:gap-20 justify-between">
         {/* Brand */}
         <div className="w-full  md:w-[30%]">
@@ -97,7 +97,7 @@ export default function Footer() {
                   href="#"
                   className="hover:underline hover:underline-offset-4 transition-all duration-300 ease-in-out"
                 >
-                  About
+                  About Developer
                 </a>
               </li>
               <li>
@@ -146,7 +146,9 @@ export default function Footer() {
 
       {/* Bottom Text */}
       <div className="text-center text-dark-gray text-sm mt-10 border-t border-dark-gray py-8">
-        © {new Date().getFullYear()} Fatema-A-Ferdaus. All rights reserved.
+        © {new Date().getFullYear()} Fatema-A-Ferdaus. All rights reserved.{" "}
+        <br />
+        <span className="text-xs font-bold"> Under Development</span>
       </div>
     </footer>
   );

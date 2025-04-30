@@ -40,9 +40,10 @@ export default function MoreContents() {
             <li>
               <Link href={`/assets`} className="custom-hover-contents">
                 <div
-                  className="h-20 aspect-square bg-cover bg-center rounded-md"
+                  className="h-20 aspect-square bg-cover bg-center bg-no-repeat rounded-md bg-white"
                   style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1636044594149-6e2f289c3868?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+                    backgroundImage: `url(/svgData/icons/service1.svg)`,
+                    backgroundSize: "60%",
                   }}
                 ></div>
                 SVG Icons
@@ -51,9 +52,9 @@ export default function MoreContents() {
             <li>
               <Link href={`/assets`} className="custom-hover-contents">
                 <div
-                  className="h-20 aspect-square bg-cover bg-center rounded-md"
+                  className="h-20 aspect-square bg-cover bg-center bg-no-repeat rounded-md"
                   style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1655111727832-c0ae847813d8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+                    backgroundImage: `url(/svgData/bg/bg2.svg)`,
                   }}
                 ></div>
                 SVG Background

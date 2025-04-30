@@ -4,37 +4,32 @@ export default function HistoryPage() {
   const contents = [
     {
       id: 1,
-      thumbnail:
-        "https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Icon Youtube",
+      thumbnail: "/svgData/icons/home1.svg",
+      title: "Icon Home",
       date: "12-02-2025",
     },
     {
       id: 2,
-      thumbnail:
-        "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Icon Instagram",
+      thumbnail: "/svgData/icons/service1.svg",
+      title: "Icon Service",
       date: "12-02-2025",
     },
     {
       id: 3,
-      thumbnail:
-        "https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Icon Twitter",
+      thumbnail: "/svgData/bg/bg4.svg",
+      title: "Blue Gradient Background",
       date: "12-02-2025",
     },
     {
       id: 4,
-      thumbnail:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Icon Figma",
+      thumbnail: "/svgData/bg/bg1.svg",
+      title: "White Black Background",
       date: "12-02-2025",
     },
     {
       id: 5,
-      thumbnail:
-        "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Icon Whatsapp",
+      thumbnail: "/svgData/icons/viewDetails2.svg",
+      title: "Icon Information",
       date: "12-02-2025",
     },
   ];
@@ -63,7 +58,7 @@ export default function HistoryPage() {
           >
             <div className="w-[75%] flex items-center gap-3 text-sm md:text-base font-semibold">
               <div
-                className="w-14 aspect-square bg-cover bg-center rounded-md"
+                className="w-14 aspect-square bg-cover bg-center rounded-md bg-no-repeat  bg-white"
                 style={{
                   backgroundImage: `url(${con.thumbnail})`,
                 }}

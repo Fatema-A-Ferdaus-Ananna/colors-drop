@@ -6,12 +6,13 @@ import EditButton from "../button/cardButton/EditButton";
 export default function TwoColCard({ content }) {
   return (
     <div
-      className="p-3 aspect-square rounded-lg bg-cover bg-center relative group bg-gray-800 shadow-lg overflow-hidden"
+      className="p-3 aspect-square rounded-lg bg-cover bg-center bg-no-repeat relative group bg-white shadow-lg overflow-hidden"
       style={{
         backgroundImage: `url(${content.thumbnail})`,
+        backgroundSize: "60%",
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div className="absolute inset-0 bg-black/5"></div>
       {/* Editable tag (visible by default, hides on hover) */}
       <span className="px-2 py-1 absolute left-2 top-2 bg-light-gray text-dark-black text-xs md:text-[13px] rounded-[4px] transition-opacity duration-300 ">
         Editable
@@ -35,7 +36,7 @@ export default function TwoColCard({ content }) {
         </Link>
 
         <Link
-          className="w-1/2 lg:w-full px-4 py-3 bg-white text-dark-black font-semibold rounded-md text-center shadow-md hover:bg-light-gray transition"
+          className="w-1/2 lg:w-full px-4 py-3 bg-white text-dark-black font-semibold rounded-md text-center shadow-md hover:bg-black hover:text-white transition-colors duration-300 ease-in"
           href={"#"}
         >
           <span className="hidden md:inline">Download</span>

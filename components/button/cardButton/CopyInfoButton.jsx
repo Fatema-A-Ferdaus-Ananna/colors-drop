@@ -6,7 +6,7 @@ export default function CopyInfoButton({ assetsInfo, iconSm = false }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const url = `${window.location.origin}/assets/${assetsInfo}`;
+    const url = `${window.location.origin}/details/${assetsInfo}`;
 
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard

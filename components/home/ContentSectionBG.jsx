@@ -1,4 +1,4 @@
-import { contents } from "@/data/data";
+import { bgContents } from "@/data/bgData";
 import CTAButton from "../button/CTAButton";
 import RectangleCard from "../Cards/RectangleCard";
 
@@ -17,7 +17,7 @@ export default function ContentSectionBG() {
           </div>
 
           <div className="md:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full">
-            {contents.map((content) => (
+            {bgContents.map((content) => (
               <RectangleCard key={content.id} content={content} />
             ))}
           </div>
