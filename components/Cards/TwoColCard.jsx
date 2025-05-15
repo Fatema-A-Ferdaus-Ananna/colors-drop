@@ -20,8 +20,8 @@ export default function TwoColCard({ content }) {
 
       {/* Icons (hidden by default, shown on hover) */}
       <div className="absolute right-2 top-2 flex flex-col gap-2 transition-opacity duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-        <DetailsButton assetsInfo={content.id} iconSm={true} />
-        <CopyInfoButton assetsInfo={content.id} iconSm={true} />
+        <DetailsButton assetsInfo={content.id} iconSm={false} />
+        <CopyInfoButton assetsInfo={content.id} iconSm={false} />
         <EditButton assetsInfo={content.id} iconSm={true} />
       </div>
 

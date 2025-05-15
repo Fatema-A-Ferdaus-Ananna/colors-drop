@@ -20,3 +20,13 @@ export const bgContents = [
     thumbnail: "/svgData/bg/bg1.svg",
   },
 ];
+
+export function getAllBg() {
+  return bgContents;
+}
+
+export function getBgById(id) {
+  const result = bgContents.find((bg) => bg.id === id);
+
+  return result;
+}

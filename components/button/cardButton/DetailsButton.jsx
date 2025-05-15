@@ -10,9 +10,9 @@ export default function DetailsButton({ assetsInfo, iconSm = false }) {
     setPreviousPath(pathname);
     // router.replace(`/details/${info}`);
     if (pathname?.startsWith("/details")) {
-      router.push(`/details/${info}`); // 🧠 already in modal → replace
+      router.push(`/details/${info}`);
     } else {
-      router.push(`/details/${info}`); // 🚀 from non-modal route → push
+      router.push(`/details/${info}`);
     }
   }
 
@@ -21,7 +21,7 @@ export default function DetailsButton({ assetsInfo, iconSm = false }) {
       <button
         onClick={() => navigateToDetails(assetsInfo)}
         className={`${
-          iconSm ? "w-8 h-8 md:w-10 md:h-10" : "w-10 h-10"
+          iconSm ? "w-8 h-8 text-xs" : "w-8 h-8 md:w-10 md:h-10 text-xs"
         } bg-white text-dark-black rounded-[4px] flex justify-center items-center shadow-md`}
       >
         <i className="fas fa-info-circle text-lg md:text-xl"></i>

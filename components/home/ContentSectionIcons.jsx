@@ -1,9 +1,12 @@
-import { contents } from "@/data/data";
+import { getAllData, getAllSvgIcon } from "@/data/data";
 import CTAButton from "../button/CTAButton";
 import TwoColCard from "../Cards/TwoColCard";
 import TabOptions from "./TabOptions";
 
 export default function ContentSectionIcons() {
+  const allSvgData = getAllData();
+  const allSvgIcon = getAllSvgIcon(allSvgData);
+
   return (
     <div className="bg-dark-black">
       <section className="container mx-auto px-5 py-24 flex flex-col justify-center items-center">
@@ -22,7 +25,7 @@ export default function ContentSectionIcons() {
           </div>
 
           <div className="md:px-10 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
-            {contents.map((content) => (
+            {allSvgIcon.map((content) => (
               <TwoColCard key={content.id} content={content} />
             ))}
           </div>

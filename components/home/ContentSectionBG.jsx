@@ -1,8 +1,11 @@
-import { bgContents } from "@/data/bgData";
+import { getAllData, getAllSvgBg } from "@/data/data";
 import CTAButton from "../button/CTAButton";
 import RectangleCard from "../Cards/RectangleCard";
 
 export default function ContentSectionBG() {
+  const allSvgData = getAllData();
+  const allSvgBg = getAllSvgBg(allSvgData);
+
   return (
     <div className="bg-white">
       <section className="container mx-auto px-5 py-24 flex flex-col justify-center items-center">
@@ -17,7 +20,7 @@ export default function ContentSectionBG() {
           </div>
 
           <div className="md:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full">
-            {bgContents.map((content) => (
+            {allSvgBg.map((content) => (
               <RectangleCard key={content.id} content={content} />
             ))}
           </div>

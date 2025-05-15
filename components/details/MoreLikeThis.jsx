@@ -1,9 +1,8 @@
 "use client";
-import { contents } from "@/data/data";
 import { useEffect, useRef, useState } from "react";
 import SquareCard from "../Cards/SquareCard";
 
-export default function MoreLikeThis({ modal = false }) {
+export default function MoreLikeThis({ moreLikeThis, modal = false }) {
   const scrollRef = useRef(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
@@ -41,7 +40,7 @@ export default function MoreLikeThis({ modal = false }) {
         ref={scrollRef}
         className="pb-3 flex flex-nowrap gap-4 overflow-x-auto scrollbar-thin custom-scrollbar select-none snap-x snap-mandatory scroll-smooth"
       >
-        {contents.map((content) => (
+        {moreLikeThis.map((content) => (
           <SquareCard key={content.id} content={content} fullW={false} />
         ))}
       </div>

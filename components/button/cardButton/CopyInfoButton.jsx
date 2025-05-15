@@ -50,7 +50,7 @@ export default function CopyInfoButton({ assetsInfo, iconSm = false }) {
         <button
           onClick={handleCopy}
           className={`${
-            iconSm ? "w-8 h-8 md:w-10 md:h-10 text-xs" : "w-10 h-10"
+            iconSm ? "w-8 h-8 text-xs" : "w-8 h-8 md:w-10 md:h-10 text-xs"
           } bg-white text-dark-black rounded-[4px] flex justify-center items-center shadow-md`}
         >
           <i

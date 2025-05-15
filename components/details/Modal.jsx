@@ -62,12 +62,12 @@ export default function Modal({ children }) {
   return (
     <div
       ref={overlay}
-      className="fixed h-screen z-50 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60 md:px-3 flex justify-center items-center"
+      className="fixed h-screen z-30 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60 md:px-3 flex justify-center items-center"
       onClick={onClick}
     >
       <div
         ref={wrapper}
-        className="p-3  w-[95%] h-[80%] md:h-[88%] max-h-fit shadow-color-purple shadow-lg flex justify-center items-center rounded-lg relative bg-white"
+        className="py-5  w-[95%] h-[80%] md:h-[88%] max-h-fit shadow-color-purple shadow-lg flex justify-center items-center rounded-lg relative bg-white"
       >
         {/* Close Icon */}
         <div className="absolute -top-2 -right-2 z-50">
@@ -80,7 +80,7 @@ export default function Modal({ children }) {
         </div>
 
         {/* Scrollable Content */}
-        <div className="overflow-y-auto overflow-x-hidden h-full max-h-fit rounded-lg custom-scrollbar-thin">
+        <div className="px-5 overflow-y-auto h-full max-h-fit rounded-lg custom-scrollbar-thin ">
           {children}
         </div>
       </div>

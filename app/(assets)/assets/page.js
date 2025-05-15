@@ -1,7 +1,10 @@
 import SquareCard from "@/components/Cards/SquareCard";
-import { contents } from "@/data/data";
+import { getAllData, getAllSvgIcon } from "@/data/data";
 
 export default function AllSVGPage() {
+  const allSvgData = getAllData();
+  const allSvgIcon = getAllSvgIcon(allSvgData);
+
   return (
     <>
       <section className="pt-24 ">
@@ -22,7 +25,6 @@ export default function AllSVGPage() {
         <div className="px-6 pt-3 container mx-auto ">
           <div className="overflow-x-auto hide-scrollbar">
             <ul className="flex items-center gap-6 flex-nowrap text-[16px] font-semibold text-dark-gray whitespace-nowrap">
-              <li>All Assets</li>
               <li className="py-4 text-dark-black border-black border-b-2">
                 SVG Icons
               </li>
@@ -58,8 +60,8 @@ export default function AllSVGPage() {
           </div>
 
           {/* Content Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full">
-            {contents.map((content) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 w-full">
+            {allSvgIcon.map((content) => (
               <SquareCard key={content.id} content={content} />
             ))}
           </div>

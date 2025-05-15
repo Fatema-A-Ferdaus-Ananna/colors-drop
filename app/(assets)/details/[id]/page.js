@@ -1,9 +1,15 @@
 import MoreLikeThis from "@/components/details/MoreLikeThis";
+import { getAllSvgByType, getDataById } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function SingleSVGPage({ params }) {
   const svgId = params.id;
+  const svgDetails = getDataById(svgId);
+  const moreLikeThis = getAllSvgByType(svgDetails);
+
+  console.log("svg id", svgId);
+  console.log("svg detaile", svgDetails);
 
   return (
     <div className="py-[86px] bg-white">
@@ -11,19 +17,23 @@ export default function SingleSVGPage({ params }) {
         {/* details */}
         <div className="py-6 flex flex-col gap-10 lg:flex-row justify-between items-center lg:items-stretch">
           <div className="w-full md:w-fit flex  items-start">
-            <div className="w-full md:w-[400px]  aspect-square rounded-2xl overflow-clip">
+            <div className="w-full md:w-[400px]  aspect-square rounded-2xl overflow-clip flex justify-center items-center">
               <Image
                 width={1000}
                 height={1000}
-                alt="photo"
-                src={`https://images.unsplash.com/photo-1744198275588-06648407b39a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-                className="w-full h-full object-cover"
+                alt={svgDetails.title}
+                src={svgDetails.thumbnail}
+                className={
+                  svgDetails.type === "icon"
+                    ? "w-[80%] h-[80%] object-cover"
+                    : "w-full  object-cover rounded-lg"
+                }
               />
             </div>
           </div>
           <div className="px-5 py-6 w-full lg:min-w-[400px] bg-light-gray bg-opacity-30 rounded-lg flex flex-col gap-8 items-start">
             <h1 className="text-2xl font-semibold text-dark-black">
-              Title Hhaijiajijn jjij
+              {svgDetails.title}
             </h1>
             <div className="w-full  flex flex-col md:flex-row gap-3 text-sm">
               <button className="py-3 w-full md:w-1/2 bg-dark-black text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors duration-300 ease-in">
@@ -69,7 +79,7 @@ export default function SingleSVGPage({ params }) {
           <h2 className="mb-3 w-fit text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-dark to-secondary-dark">
             More Like This
           </h2>
-          <MoreLikeThis />
+          <MoreLikeThis moreLikeThis={moreLikeThis} />
         </div>
       </section>
     </div>
